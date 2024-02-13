@@ -19,7 +19,7 @@ public class MainTest {
         writeToInputFile(fileContent);
 
         // when
-        TworzeniePliku.main(new String[]{});
+        Main.main(new String[]{});
 
         // then
         assertThat(outContent.toString()).satisfiesAnyOf(
@@ -35,7 +35,7 @@ public class MainTest {
         writeToInputFile(fileContent);
 
         // when
-        TworzeniePliku.main(new String[]{});
+        Main.main(new String[]{});
 
         // then
         assertThat(outContent.toString()).satisfiesAnyOf(
@@ -51,7 +51,7 @@ public class MainTest {
         writeToInputFile(fileContent);
 
         // when
-        TworzeniePliku.main(new String[]{});
+        Main.main(new String[]{});
 
         // then
         assertThat(outContent.toString()).satisfiesAnyOf(
@@ -67,7 +67,7 @@ public class MainTest {
         writeToInputFile(fileContent);
 
         // when
-        TworzeniePliku.main(new String[]{});
+        Main.main(new String[]{});
 
         // then
         assertThat(outContent.toString()).contains("5.5 + 12.1 = 17.6");
@@ -80,7 +80,7 @@ public class MainTest {
         writeToInputFile(fileContent);
 
         // when
-        TworzeniePliku.main(new String[]{});
+        Main.main(new String[]{});
 
         // then
         assertThat(outContent.toString()).satisfiesAnyOf(

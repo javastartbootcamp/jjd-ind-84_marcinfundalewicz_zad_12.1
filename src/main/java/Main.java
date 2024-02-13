@@ -1,17 +1,21 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
+        // uzupełnij rozwiązanie
+
+        String inputFileName = "operations.txt";
+        String outputFileName = "results.txt";
+
         try {
-            String[] dzialaniaMatematyczne = DzialaniaNaPlikach.wczytajPlik("operacjeMatematyczne.txt");
-            int[] wynikiDzialanMatematycznych = DzialaniaNaPlikach.obliczenia(dzialaniaMatematyczne);
-            DzialaniaNaPlikach.wyswietlenieTekstuwKonsoli(dzialaniaMatematyczne, wynikiDzialanMatematycznych);
-            DzialaniaNaPlikach.zapisanieWynikowDoPliku(dzialaniaMatematyczne, wynikiDzialanMatematycznych, "wynikiDzialanMatematycznych.txt");
+            String[] mathOperations = FileUtils.readFile(inputFileName);
+            double[] mathOperationsResults = FileUtils.calculateResult(mathOperations);
+            FileUtils.displayAndSaveResults(mathOperations, mathOperationsResults, outputFileName);
         } catch (FileNotFoundException e) {
-            System.out.println("Nie da sie wczytac pliku");
+            System.out.println("Nie udało się wczytać pliku");
         } catch (IOException e) {
-            System.out.println("Nie da sie zapisac pliku");
+            System.out.println("Nie udało się zapisać pliku");
         }
     }
 }
