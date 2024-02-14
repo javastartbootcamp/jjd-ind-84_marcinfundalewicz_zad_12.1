@@ -10,7 +10,7 @@ class Main {
 
         try {
             String[] mathOperations = FileUtils.readFile(inputFileName);
-            double[] mathOperationsResults = FileUtils.calculateResult(mathOperations);
+            double[] mathOperationsResults = Calculations.calculateResult(mathOperations);
             FileUtils.displayAndSaveResults(mathOperations, mathOperationsResults, outputFileName);
         } catch (FileNotFoundException e) {
             System.out.println("Nie udało się wczytać pliku");
